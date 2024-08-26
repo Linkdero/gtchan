@@ -5,6 +5,9 @@ import {
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Contact from '../views/Contact.vue';
+import Posts from '../views/Posts.vue';
+import Temas from '../views/Temas.vue';
+// import CategoriaPosts from '../views/CategoriaPosts.vue';
 
 const routes = [{
         path: '/',
@@ -27,6 +30,21 @@ const routes = [{
             title: 'Contact'
         }
     },
+    {
+        path: '/categorias/:slug/temas',
+        component: Temas,
+        meta: {
+            title: 'Temas'
+        }
+    },
+    {
+        path: '/temas/:slug/posts',
+        component: Posts,
+        meta: {
+            title: 'Posts'
+        }
+    },
+
     // Más rutas aquí
 ];
 
